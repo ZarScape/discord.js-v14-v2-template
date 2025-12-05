@@ -18,7 +18,7 @@ module.exports = {
   run: async (client, interaction) => {
     // ---------------- Create Dummy JSON ----------------
     // Create a simple JSON object and convert it to a buffer
-    const dummyJSON = { message: 'Hello from Components V2!', timestamp: new Date() };
+    const dummyJSON = { message: 'Hello from Components V2! join my support server if this code helps https://discord.gg/6YVmxA4Qsf', timestamp: new Date() };
     const buffer = Buffer.from(JSON.stringify(dummyJSON, null, 2));
 
     // ---------------- Attachment ----------------

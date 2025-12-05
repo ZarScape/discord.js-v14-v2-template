@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 require('./console/watermark');
 
 const { Client, Partials, Collection } = require('discord.js');

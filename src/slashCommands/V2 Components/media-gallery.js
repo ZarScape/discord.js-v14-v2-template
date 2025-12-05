@@ -19,9 +19,7 @@ module.exports = {
     // MediaGalleryBuilder displays images/videos in a carousel format
     const gallery = new MediaGalleryBuilder().addItems(
       new MediaGalleryItemBuilder()
-        .setURL('https://raw.githubusercontent.com/ZarCodeX/ZarCodeX/refs/heads/main/images/ZarCodeX%20(original).png'),
-      new MediaGalleryItemBuilder()
-        .setURL('https://raw.githubusercontent.com/ZarCodeX/ZarCodeX/refs/heads/main/images/black.png')
+        .setURL('https://raw.githubusercontent.com/ZarScape/ZarScape/refs/heads/main/images/ZarScape/logo-with-background.png')
     );
 
     // ---------------- Container ----------------

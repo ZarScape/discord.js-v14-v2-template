@@ -1,7 +1,6 @@
 // /v2-components: Demonstrates all Discord Components V2
 // Detailed guide included at the bottom
 
-const { SlashCommandBuilder } = require('@discordjs/builders');
 const {
   MessageFlags,
   TextDisplayBuilder,
@@ -17,7 +16,8 @@ const {
   ButtonBuilder,
   ButtonStyle,
   FileBuilder,
-  AttachmentBuilder
+  AttachmentBuilder,
+  SlashCommandBuilder
 } = require('discord.js');
 const config = require('../../config/config.json');
 
@@ -58,18 +58,18 @@ module.exports = {
 
     // Media Gallery
     const mediaGallery = new MediaGalleryBuilder().addItems(
-      new MediaGalleryItemBuilder().setURL('https://raw.githubusercontent.com/ZarCodeX/ZarCodeX/refs/heads/main/images/ZarCodeX%20(original).png'),
-      new MediaGalleryItemBuilder().setURL('https://raw.githubusercontent.com/ZarCodeX/ZarCodeX/refs/heads/main/images/black.png')
+      new MediaGalleryItemBuilder().setURL('https://raw.githubusercontent.com/ZarScape/ZarScape/refs/heads/main/images/ZarScape/logo-with-background.png'),
+      new MediaGalleryItemBuilder().setURL('https://raw.githubusercontent.com/ZarScape/ZarScape/refs/heads/main/images/ZarScape/logo-with-background.png')
     );
 
     // Sections with Buttons
     const sectionWithButtons = [
       new SectionBuilder()
-        .addTextDisplayComponents(new TextDisplayBuilder().setContent('🌐 **Portfolio**'))
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent('🌐 GitHub'))
         .setButtonAccessory(
           new ButtonBuilder()
             .setLabel('GitHub')
-            .setURL('https://github.com/ZarCodeX')
+            .setURL('https://github.com/ZarScape')
             .setStyle(ButtonStyle.Link)
         ),
       new SectionBuilder()
@@ -77,11 +77,11 @@ module.exports = {
         .setButtonAccessory(
           new ButtonBuilder()
             .setLabel('Channel')
-            .setURL('https://www.youtube.com/@ZarCodeX')
+            .setURL('https://www.youtube.com/@ZarScape')
             .setStyle(ButtonStyle.Link)
         ),
       new SectionBuilder()
-        .addTextDisplayComponents(new TextDisplayBuilder().setContent('💬 **Discord Support**'))
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent('💬 **Discord**'))
         .setButtonAccessory(
           new ButtonBuilder()
             .setLabel('Zarco HQ')

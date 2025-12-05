@@ -1,4 +1,8 @@
-const { MessageFlags, TextDisplayBuilder, ContainerBuilder } = require('discord.js');
+const {
+    MessageFlags,
+    TextDisplayBuilder,
+    ContainerBuilder,
+} = require('discord.js');
 const config = require('../../config/config.json');
 
 module.exports = {
@@ -6,28 +10,28 @@ module.exports = {
     once: false,
     async execute(client, interaction) {
         try {
-            if (!interaction.isChatInputCommand()) return;
+            if (interaction.isChatInputCommand()) {
 
-            // Block commands in DMs
-            if (!interaction.guild) {
-                const accentColor = parseInt(config.color.replace('#', ''), 16);
-                const dmBlock = new ContainerBuilder()
-                    .setAccentColor(accentColor)
-                    .addTextDisplayComponents(
-                        new TextDisplayBuilder().setContent(`${config.crossmark_emoji} This command can only be used in a server.`)
-                    );
+                // Block DM (server-only commands)
+                if (!interaction.guild) {
+                    const accentColor = parseInt(config.color.replace('#', ''), 16);
+                    const dmBlock = new ContainerBuilder()
+                        .setAccentColor(accentColor)
+                        .addTextDisplayComponents(
+                            new TextDisplayBuilder().setContent(`${config.crossmark_emoji} This command can only be used in a server.`)
+                        );
 
-                return interaction.reply({
-                    flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
-                    components: [dmBlock],
-                });
+                    return interaction.reply({
+                        flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
+                        components: [dmBlock],
+                    });
+                }
+
+                const command = client.slash.get(interaction.commandName);
+                if (!command) return;
+
+                await command.run(client, interaction, interaction.options);
             }
-
-            // Run command
-            const command = client.slash.get(interaction.commandName);
-            if (!command) return;
-
-            await command.run(client, interaction, interaction.options);
 
         } catch (err) {
             console.error('[INTERACTION ERROR]', err);
@@ -37,6 +41,7 @@ module.exports = {
                     .addTextDisplayComponents(
                         new TextDisplayBuilder().setContent('An unexpected error occurred while handling this interaction.')
                     );
+
                 interaction.reply({
                     flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
                     components: [errorBlock],

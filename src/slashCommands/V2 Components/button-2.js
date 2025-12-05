@@ -14,7 +14,7 @@ module.exports = {
   // Define the slash command
   data: new SlashCommandBuilder()
     .setName('button-2')
-    .setDescription('Shows a link button inside a container'),
+    .setDescription('Shows a link button inside a container (style 2'),
 
   // Run function executed when the slash command is used
   run: async (client, interaction) => {
@@ -25,9 +25,9 @@ module.exports = {
 
       // Link button that opens your GitHub Pages site
       const linkButton = new ButtonBuilder()
-        .setLabel('Visit ZarCodeX Site')        // Button label text
+        .setLabel('Visit ZarScape Site')        // Button label text
         .setStyle(ButtonStyle.Link)             // Link button style
-        .setURL('https://zarcodex.github.io');  // URL to open when clicked
+        .setURL('https://zarScape.github.io');  // URL to open when clicked
 
       // Optional separator between text and button
       const sep = new SeparatorBuilder()

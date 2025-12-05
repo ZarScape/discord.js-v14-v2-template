@@ -1,5 +1,5 @@
-// src/zarco.js
-require('dotenv').config();
+// src/zar.js
+require('dotenv').config({ quiet: true });
 const { ClusterManager } = require('discord-hybrid-sharding');
 const path = require('path');
 const config = require('./config/config.json');

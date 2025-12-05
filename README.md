@@ -71,7 +71,7 @@ A full-featured Discord bot template built with **Discord.js v14** and the new *
 ┃ ┣ 📂temp                 # Temporary files (e.g., generated data)
 ┃ ┣ 📂utils                # Utility functions (optional)
 ┃ ┣ 📜index.js
-┃ ┗ 📜zarco.js
+┃ ┗ 📜zar.js
 ┣ 📜.env                    # Environment variables (TOKEN, CLIENTID)
 ┗ 📜package.json
 ```
@@ -104,7 +104,7 @@ A full-featured Discord bot template built with **Discord.js v14** and the new *
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ZarCodeX/discord.js-v14-v2-template.git
+git clone https://github.com/ZarScape/discord.js-v14-v2-template.git
 cd discord.js-v14-v2-template
 ````
 
@@ -196,7 +196,7 @@ All of these components are included in separate commands as examples.
 
 ## ⚖ License
 
-MIT License – free to use and modify for personal or commercial projects.
+ISC License – free to use and modify for personal or commercial projects.
 
 ---
 

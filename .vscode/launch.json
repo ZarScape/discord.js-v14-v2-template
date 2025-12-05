@@ -9,7 +9,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\zarco.js"
+            "program": "${workspaceFolder}\\src\\zar.js"
         }
     ]
 }

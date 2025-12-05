@@ -3,7 +3,7 @@ const client = require('../index');
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 const fs = require('fs');
 const colors = require('colors');
-require('dotenv').config(); // Load .env at the top
+require('dotenv').config({ quiet: true });
 
 module.exports = async () => {
     const slash = [];
