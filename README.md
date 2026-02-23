@@ -26,12 +26,13 @@ A full-featured Discord bot template built with **Discord.js v14** and the new *
     <td align="center">
       <img src="assets/example3.png" alt="Example 3"><br>Example 3
     </td>
-    <td align="center">
-      <img src="assets/example4.png" alt="Example 4"><br>Example 4
-    </td>
   </tr>
 </table>
 </p>
+
+---
+
+<img src="assets/example4.png" alt="Example 4"><br>
 
 ---
 
@@ -202,4 +203,4 @@ ISC License – free to use and modify for personal or commercial projects.
 
 ## 📞 Support
 
-Join the [Zarco HQ Discord](https://discord.gg/6YVmxA4Qsf) for help, updates, and discussion.
+Join the [Zar HQ Discord](https://discord.gg/6YVmxA4Qsf) for help, updates, and discussion.

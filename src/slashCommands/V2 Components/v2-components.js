@@ -84,7 +84,7 @@ module.exports = {
         .addTextDisplayComponents(new TextDisplayBuilder().setContent('💬 **Discord**'))
         .setButtonAccessory(
           new ButtonBuilder()
-            .setLabel('Zarco HQ')
+            .setLabel('Zar HQ')
             .setURL('https://discord.gg/6YVmxA4Qsf')
             .setStyle(ButtonStyle.Link)
         )

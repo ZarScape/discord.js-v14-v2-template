@@ -1,6 +1,6 @@
 {
   "name": "discord.js-v14-v2-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Discord.js v14 template with v2 components",
   "license": "ISC",
   "keywords": [
@@ -11,7 +11,7 @@
     "components",
     "discord-hybrid-sharding",
     "ZarScape",
-    "zarco",
+    "zar",
     "discord-bot"
   ],
   "main": "src/zar.js",
@@ -25,6 +25,6 @@
     "colors": "^1.4.0",
     "discord-hybrid-sharding": "^3.0.1",
     "discord.js": "^14.25.1",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.3.1"
   }
 }
