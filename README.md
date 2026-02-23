@@ -16,15 +16,15 @@ A full-featured Discord bot template built with **Discord.js v14** and the new *
 <table>
   <tr>
     <td align="center">
-      <img src="assets/example1.png" alt="Example 1"><br>Example 1
+      <img src="assets/example-1.png" alt="Example 1"><br>Example 1
     </td>
     <td align="center">
-      <img src="assets/example2.png" alt="Example 2"><br>Example 2
+      <img src="assets/example-2.png" alt="Example 2"><br>Example 2
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/example3.png" alt="Example 3"><br>Example 3
+      <img src="assets/example-3.png" alt="Example 3"><br>Example 3
     </td>
   </tr>
 </table>
@@ -32,7 +32,7 @@ A full-featured Discord bot template built with **Discord.js v14** and the new *
 
 ---
 
-<img src="assets/example4.png" alt="Example 4"><br>
+<img src="assets/example-4.png" alt="Example 4"><br>
 
 ---
 
