@@ -54,9 +54,9 @@ If you notice any inconsistencies or have suggestions for improvement, please re
 
 ```
 📦discord.js v14 with v2 components template
+┣ 📂assets                  # Project assets (e.g., images)
 ┣ 📂data                    # Optional data storage for bot usage
 ┣ 📂src
-┃ ┣ 📂assets                # Assets (optional)
 ┃ ┣ 📂config
 ┃ ┃ ┗ 📜config.json         # Bot configuration (color, emojis, etc.)
 ┃ ┣ 📂console
@@ -64,30 +64,35 @@ If you notice any inconsistencies or have suggestions for improvement, please re
 ┃ ┣ 📂events                # Event handlers
 ┃ ┃ ┣ 📂client
 ┃ ┃ ┃ ┣ 📜interactionCreate.js   # Interaction event handler
+┃ ┃ ┃ ┣ 📜messageCreate.js     # Message command handler
 ┃ ┃ ┃ ┗ 📜ready.js               # Ready event handler
 ┃ ┃ ┗ 📂Other               # Other custom events
-┃ ┣ 📂handlers              # Handlers for events and slash commands
-┃ ┃ ┣ 📜event.js
-┃ ┃ ┗ 📜slash.js
+┃ ┣ 📂handlers              # Handlers for events and commands
+┃ ┃ ┣ 📜event.js               # Event loader
+┃ ┃ ┣ 📜message.js             # Message command loader
+┃ ┃ ┗ 📜slash.js               # Slash command loader
+┃ ┣ 📂messageCommands       # Message command files organized by category
+┃ ┃ ┗ 📂Info
+┃ ┃   ┗ 📜ping.js
 ┃ ┣ 📂slashCommands         # Slash command files organized by category
 ┃ ┃ ┣ 📂Info
 ┃ ┃ ┃ ┗ 📜ping.js
 ┃ ┃ ┗ 📂V2 Components
-┃ ┃ ┃ ┣ 📜button-1.js
-┃ ┃ ┃ ┣ 📜button-2.js
-┃ ┃ ┃ ┣ 📜button-3.js
-┃ ┃ ┃ ┣ 📜file-components.js
-┃ ┃ ┃ ┣ 📜media-gallery.js
-┃ ┃ ┃ ┣ 📜menu.js
-┃ ┃ ┃ ┣ 📜section.js
-┃ ┃ ┃ ┣ 📜separator.js
-┃ ┃ ┃ ┣ 📜text-display.js
-┃ ┃ ┃ ┗ 📜v2-components.js
+┃ ┃   ┣ 📜button-1.js
+┃ ┃   ┣ 📜button-2.js
+┃ ┃   ┣ 📜button-3.js
+┃ ┃   ┣ 📜file-components.js
+┃ ┃   ┣ 📜media-gallery.js
+┃ ┃   ┣ 📜menu.js
+┃ ┃   ┣ 📜section.js
+┃ ┃   ┣ 📜separator.js
+┃ ┃   ┣ 📜text-display.js
+┃ ┃   ┗ 📜v2-components.js
 ┃ ┣ 📂temp                 # Temporary files (e.g., generated data)
 ┃ ┣ 📂utils                # Utility functions (optional)
 ┃ ┣ 📜index.js
 ┃ ┗ 📜zar.js
-┣ 📜.env                    # Environment variables (TOKEN, CLIENTID)
+┣ 📜.env.example            # Environment variables (TOKEN, CLIENTID)
 ┗ 📜package.json
 ```
 
