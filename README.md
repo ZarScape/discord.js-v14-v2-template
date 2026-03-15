@@ -250,7 +250,7 @@ ISC License – free to use and modify for personal or commercial projects.
 
 Recent updates are tracked in:
 
-- [CHANGELOG.md](changelog.md)
+- [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
