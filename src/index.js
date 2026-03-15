@@ -43,8 +43,8 @@ client.aliases = new Collection();
 // Attach ClusterClient
 client.cluster = new ClusterClient(client);
 
-// Load event and slash handlers AFTER client is exported
-["event", "slash"].forEach(file => require(`./handlers/${file}`)(client));
+// Load handlers AFTER client is exported
+["event", "slash", "message"].forEach(file => require(`./handlers/${file}`)(client));
 
 // Login
 client.login(process.env.TOKEN)

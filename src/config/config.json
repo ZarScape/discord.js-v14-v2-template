@@ -1,3 +1,5 @@
 {
-    "color": "000000"
+    "color": "000000",
+    "prefix": "?",
+    "botName": "zar"
 }
