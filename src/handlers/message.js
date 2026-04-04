@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const colors = require('colors');
+const { colorize } = require('../utils/consoleStyle');
 
 module.exports = (client) => {
     const commandsPath = path.join(__dirname, '../messageCommands');
@@ -11,7 +11,7 @@ module.exports = (client) => {
     client.aliases.clear();
 
     if (!fs.existsSync(commandsPath)) {
-        console.log(colors.yellow('[WARN] messageCommands folder not found, skipping message handler.'));
+        console.log(colorize('yellow', '[WARN] messageCommands folder not found, skipping message handler.'));
         return;
     }
 
@@ -73,11 +73,11 @@ module.exports = (client) => {
     const boxLength = Math.max(...allCommands.split('\n').map(line => line.length)) + 4;
     const top = `╔${'═'.repeat(boxLength)}╗`;
     const bottom = `╚${'═'.repeat(boxLength)}╝`;
-    console.log(colors.green(top));
+    console.log(colorize('green', top));
     allCommands.split('\n').forEach(line => {
-        console.log(colors.green(`║ ${line.padEnd(boxLength - 2)} ║`));
+        console.log(colorize('green', `║ ${line.padEnd(boxLength - 2)} ║`));
     });
-    console.log(colors.green(bottom));
+    console.log(colorize('green', bottom));
 
-    console.log(colors.magenta('SUCCESS: Message commands loaded successfully!'));
+    console.log(colorize('magenta', 'SUCCESS: Message commands loaded successfully!'));
 };

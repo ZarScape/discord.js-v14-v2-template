@@ -2,8 +2,8 @@ require('dotenv').config({ quiet: true });
 require('./console/watermark');
 
 const { Client, Partials, Collection } = require('discord.js');
-const colors = require('colors');
 const { ClusterClient } = require('discord-hybrid-sharding');
+const { colorize } = require('./utils/consoleStyle');
 
 // Create Discord client
 const client = new Client({
@@ -30,7 +30,7 @@ module.exports = client;
 
 // Token check
 if (!process.env.TOKEN) {
-    console.log("[WARN] Token for Discord app is required! Put your token in .env file".yellow + "\n");
+    console.log(`${colorize('yellow', '[WARN] Token for Discord app is required! Put your token in .env file')}\n`);
     process.exit();
 }
 
@@ -48,7 +48,7 @@ client.cluster = new ClusterClient(client);
 
 // Login
 client.login(process.env.TOKEN)
-    .then(() => console.log("[INFO] App logged in successfully".green))
+    .then(() => console.log(colorize('green', '[INFO] App logged in successfully')))
     .catch(err => {
         console.error("[CRUSH] Failed to login:", err);
         process.exit();

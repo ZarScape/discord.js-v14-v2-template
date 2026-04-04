@@ -1,6 +1,6 @@
 {
   "name": "discord.js-v14-v2-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Discord.js v14 template with v2 components",
   "license": "ISC",
   "keywords": [
@@ -22,9 +22,8 @@
   "author": "ZarScape",
   "homepage": "https://github.com/ZarScape/discord.js-v14-v2-template.git",
   "dependencies": {
-    "colors": "^1.4.0",
     "discord-hybrid-sharding": "^3.0.1",
-    "discord.js": "^14.25.1",
-    "dotenv": "^17.3.1"
+    "discord.js": "^14.26.2",
+    "dotenv": "^17.4.0"
   }
 }

@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.1.1] - 2026-04-04
+
+### Changed
+- Updated `discord.js` to `^14.26.2`.
+- Updated `dotenv` to `^17.4.0`.
+- Removed the `colors` dependency and replaced it with a native console styling helper built on Node's `util.styleText`.
+- Bumped package version metadata to `1.1.1`.
+
 ## [1.1.0] - 2026-03-07
 
 ### Added

@@ -1,6 +1,6 @@
 // ========================= EVENT HANDLER =========================
 const fs = require('fs');
-const colors = require('colors');
+const { colorize } = require('../utils/consoleStyle');
 
 module.exports = (client) => {
     client.setMaxListeners(100);
@@ -39,11 +39,11 @@ module.exports = (client) => {
     const boxLength = Math.max(...allEvents.split('\n').map(line => line.length)) + 4;
     const top = `╔${'─'.repeat(boxLength)}╗`;
     const bottom = `╚${'─'.repeat(boxLength)}╝`;
-    console.log(colors.cyan(top));
+    console.log(colorize('cyan', top));
     allEvents.split('\n').forEach(line => {
-        console.log(colors.cyan(`║ ${line.padEnd(boxLength - 2)} ║`));
+        console.log(colorize('cyan', `║ ${line.padEnd(boxLength - 2)} ║`));
     });
-    console.log(colors.cyan(bottom));
+    console.log(colorize('cyan', bottom));
 
-    console.log(colors.magenta('All events loaded successfully!'));
+    console.log(colorize('magenta', 'All events loaded successfully!'));
 };

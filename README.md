@@ -89,7 +89,8 @@ If you notice any inconsistencies or have suggestions for improvement, please re
 ┃ ┃   ┣ 📜text-display.js
 ┃ ┃   ┗ 📜v2-components.js
 ┃ ┣ 📂temp                 # Temporary files (e.g., generated data)
-┃ ┣ 📂utils                # Utility functions (optional)
+┃ ┣ 📂utils                # Utility functions
+┃ ┃   ┗ 📜consoleStyle.js  # Console styling helper
 ┃ ┣ 📜index.js
 ┃ ┗ 📜zar.js
 ┣ 📜.env.example            # Environment variables (TOKEN, CLIENTID)
@@ -173,7 +174,7 @@ You should see a consolidated console log with **all commands and events loaded*
 3. Use any supported trigger:
    - `?ping`
    - `zar ping`
-   - `@YourBot ping`
+   - `@Bot ping`
 
 ### V2 Components Examples
 
@@ -243,6 +244,13 @@ All of these components are included in separate commands as examples.
 ## ⚖ License
 
 ISC License – free to use and modify for personal or commercial projects.
+
+---
+
+## Runtime Notes
+
+* Console styling now uses Node's native `util.styleText`
+* The startup logging helper lives in `src/utils/consoleStyle.js`.
 
 ---
 
